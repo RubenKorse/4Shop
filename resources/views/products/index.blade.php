@@ -11,6 +11,9 @@
 						<h5 class="product-title"><span>{{ $product->title }}</span><em>&euro;{{ $product->price }}</em></h5>
 						@unless(empty($product->description))
 							<p>{{ $product->description }}</p>
+                            @if(!empty($product->discount))
+                                <p class="korting">Nu {{$product->discount}}% korting!</p>
+                            @endif
 						@endunless
 					</div>
 					<button class="btn btn-primary">Meer info &amp; bestellen</button>

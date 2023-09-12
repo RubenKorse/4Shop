@@ -23,6 +23,7 @@ class CreateOrdersTable extends Migration
             $table->string('mollie_id')->nullable();
             $table->boolean('payed')->default(false);
             $table->timestamps();
+            $table->boolean('delivered')->default(false);
         });
     }
 
