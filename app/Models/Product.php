@@ -17,4 +17,9 @@ class Product extends Model
         return number_format($final_price, 2);
     }
 
+    public function categorys()
+    {
+        return $this->belongsto(Category::class);
+    }
+
 }

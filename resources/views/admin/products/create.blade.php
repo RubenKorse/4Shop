@@ -2,10 +2,10 @@
 
 @section('content')
 
-<div class="d-flex justify-content-center my-5"> 
+<div class="d-flex justify-content-center my-5">
 
 	<form action="{{ route('admin.products.store') }}" method="POST" style="min-width: 320px;" enctype="multipart/form-data">
-		
+
 		<h4>Nieuw product</h4>
 
 		<div class="form-group">
@@ -40,6 +40,14 @@
 				<input class="form-check-input" type="radio" name="leiding" id="leiding0" value="0">
 				<label class="form-check-label" for="leiding0">Leden en leiding</label>
 			</div>
+		</div>
+		<div class="form-group">
+			<label for="category">Categorie</label>
+			<select name="category" id="category" class="form-control">
+				@foreach($categories as $category)
+					<option value="{{ $category->id }}">{{ $category->name }}</option>
+				@endforeach
+			</select>
 		</div>
 		<div class="form-group">
 			<input type="file" id="image" name="image" accept="image/png, image/jpeg">

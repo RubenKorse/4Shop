@@ -119,6 +119,166 @@ span.collapsing{
 	color: white !important;
 }
 
+
+@media (max-width: 576px) {
+	h1{
+		font-size: 8vw;
+	}
+
+	header{
+		flex-direction: column;
+		margin-bottom: 1rem;
+		text-align: center;
+	}
+
+	header h3{
+		font-size: 1.25rem;
+		line-height: initial;
+	}
+
+	.nav{
+		flex-direction: column;
+    	text-align: center;
+	}
+
+	.product-row{
+		display: block;
+	}
+
+	.product-row img{
+		width: 100%;
+	}
+
+	.product-body{
+		width: 100%;
+		padding: 0;
+		padding-top: 1em;
+	}
+
+	.cart{
+		height: 24px;
+	}
+}
+
+@import url('https://fonts.googleapis.com/css?family=Oswald:400,700');
+
+.jumbotron img{
+	width: 70%;
+	margin-bottom: 1.5rem;
+}
+
+form{
+	margin-top: 2em;
+}
+
+fieldset{
+	margin: 1em 0;
+}
+
+legend{
+	border-bottom: 1px solid #cccccc;
+	margin-bottom: 1em;
+	font-size: 1rem;
+	font-weight: bold;
+}
+
+form li{
+	list-style-type: circle;
+}
+
+header{
+	display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.my-table{
+	background: lightgray;
+    padding: 30px 20px;
+    border-radius: 5px;
+}
+
+.my-table .badge{
+	font-size: 100%;
+	margin-bottom: 10px;
+}
+
+.my-table .row > div{
+	margin-bottom: 10px;
+}
+
+.my-table .row > div > *{
+	display: block;
+}
+
+.my-table .my-header{
+	padding: 5px 0;
+	margin-top: 20px;
+	font-weight: bold;
+}
+
+.my-header:first-child{
+	margin-top: 0;
+}
+
+.product-row{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding: 2em 0;
+	border-bottom: .05rem solid #e5e5e5
+}
+
+.product-row:last-child{
+	border: none;
+}
+
+.product-row img{
+	width: 50%;
+	align-self: center;
+}
+.fun-edit{
+    display: flex;
+    justify-content: space-between;
+}
+
+.fun-edit form{
+    margin-right: 400px;
+}
+.product-body{
+	width: 50%;
+	padding: 1em 2em;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.products .form-control{
+	margin-bottom: 1em;
+}
+
+.no-link, .no-link:hover{
+	color: initial;
+	text-decoration: none;
+}
+
+span.collapsing{
+	display: block;
+}
+
+.cart{
+	height: 30px;
+}
+
+.nav-link{
+	color: white !important;
+}
+.product-title{
+	display: flex;
+	justify-content: space-between;
+}
+
+
 @media (max-width: 576px) {
 	h1{
 		font-size: 8vw;
