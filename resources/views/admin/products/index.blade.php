@@ -13,6 +13,7 @@
         <tr>
             <th>Titel</th>
             <th>Prijs</th>
+            <th>korting</th>
             <th>Categorie</th>
             <th colspan="4">&nbsp;</th>
         </tr>
@@ -20,6 +21,7 @@
             <tr>
                 <td>{{ $product->title }}</td>
                 <td>&euro;{{ $product->price }}</td>
+                <td>%{{ $product->discount }}</td>
                 <td>
                     @foreach($categories as $category)
                         @if($category->id == $product->category_id)

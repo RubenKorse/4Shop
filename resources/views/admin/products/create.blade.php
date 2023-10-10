@@ -10,7 +10,7 @@
 
 		<div class="form-group">
 			<label for="title">Titel</label>
-			<input type="text" id="title" name="title" class="form-control" value="{{ old('title') }}">
+			<input type="text" id="title" name="title" class="form-control" value="">
 		</div>
 		<div class="form-group">
 			<label for="price">Prijs</label>
@@ -18,9 +18,13 @@
 		        <div class="input-group-prepend">
 		        	<div class="input-group-text">&euro;</div>
 		        </div>
-				<input type="number" min="0" id="price" name="price" class="form-control" value="{{ old('price') }}">
+				<input type="number" min="0" id="price" name="price" class="form-control" value="">
 			</div>
 		</div>
+        <div class="form-group">
+            <label for="discount">Korting:</label>
+            <input type="number" id="discount" name="discount" class="form-control" value="">
+        </div>
 		<div class="form-group my-4">
 			<div class="form-check form-check-inline">
 				<input class="form-check-input" type="radio" name="active" id="active1" value="1">

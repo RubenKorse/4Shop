@@ -103,7 +103,8 @@ class ProductController extends Controller
     public function edit(Product $product)
     {
         return view('admin.products.edit')
-                ->with(compact('product'));
+                ->with(compact('product'))
+                ->with('categories', Category::all());
     }
 
     public function update(Request $request, Product $product)

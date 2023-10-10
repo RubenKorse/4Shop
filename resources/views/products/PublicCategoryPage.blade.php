@@ -2,6 +2,7 @@
 
 @section('content')
 
+        <a href="/">home</a>
     @foreach($categories as $category)
         <a href="{{ route('categories.showcategory', $category) }}">{{ $category->name }}</a>
     @endforeach

@@ -31,6 +31,9 @@ Route::post('/winkel/bestellen', [OrderController::class, 'pay'])->name('pay');
 Route::get('/winkel/{product}', [ProductController::class, 'show'])->name('products.show');
 Route::post('/winkel/{product}', [ProductController::class, 'order'])->name('products.order');
 
+//rout naar orderen via categorie
+Route::get('/categories/{category}', [ProductController::class, 'showcategory'])->name('categories.showcategory');
+
 Route::get('/bestelling/{order}/{slug}', [OrderController::class, 'show'])->name('order.show');
 Route::get('/bestelling/{order}/{slug}/cancel', [OrderController::class, 'cancel'])->name('order.cancel');
 
@@ -56,6 +59,7 @@ Route::group(['middleware' => 'auth', 'prefix' => 'admin'], function () {
     Route::resource('orders', AdminOrderController::class, ['as' => 'admin'])->only(['index', 'show', 'destroy']);
 
     Route::resource('categories', \App\Http\Controllers\Admin\CategoryController::class, ['as' => 'admin'])->except('show');
+    Route::get('orders/{order}/toggle', [AdminOrderController::class, 'toggle'])->name('orders.toggle');
 
 });
 

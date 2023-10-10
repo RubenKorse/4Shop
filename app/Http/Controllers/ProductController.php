@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Product;
 use App\Models\Order_rule;
 use Illuminate\Http\Request;
+use App\Models\Category;
 
 class ProductController extends Controller
 {
@@ -12,7 +13,14 @@ class ProductController extends Controller
     {
         $products = Product::where('active', true)->get();
         return view('products.index')
-                ->with(compact('products'));
+                ->with(compact('products'))
+                ->with('categories', Category::all());
+    }
+    public function showcategory($category)
+    {
+        $products = Product::where('category_id', $category)->get();
+        return view('products.PublicCategoryPage', compact('products', "category"))
+                ->with('categories', Category::all());;
     }
 
     public function show(Product $product)
